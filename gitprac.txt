@@ -1,0 +1,253 @@
+C:\Users\CHANDRA's>git --version
+git version 2.25.0.windows.1
+
+C:\Users\CHANDRA's>git config
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --default <value>     with --get, use default value when missing entry
+
+
+C:\Users\CHANDRA's>git config --global user.name "KaranChandra"
+
+C:\Users\CHANDRA's>git config --global user.email "karan.chandra@somaiya.edu"
+
+C:\Users\CHANDRA's>git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+credential.helper=manager
+user.name=KaranChandra
+user.email=karan.chandra@somaiya.edu
+
+C:\Users\CHANDRA's>git help config
+
+C:\Users\CHANDRA's>cd documents
+
+C:\Users\CHANDRA's\Documents>cd JSON&AJAX
+The system cannot find the path specified.
+'AJAX' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\CHANDRA's\Documents>cd json&ajaxExampleYoutube
+The system cannot find the path specified.
+'ajaxExampleYoutube' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\CHANDRA's\Documents>cd jsonajaxExampleYoutube
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>git init
+Initialized empty Git repository in C:/Users/CHANDRA's/Documents/jsonajaxExampleYoutube/.git/
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        css/
+        index.html
+        js/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>git add -A
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   css/styles.css
+        new file:   index.html
+        new file:   js/main.js
+
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>git commit -m "Initial"
+[master (root-commit) b2eb715] Initial
+ 3 files changed, 134 insertions(+)
+ create mode 100644 css/styles.css
+ create mode 100644 index.html
+ create mode 100644 js/main.js
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>git status
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>git log
+commit b2eb715e4ee0a104f750937872f6283b69372db0 (HEAD -> master)
+Author: KaranChandra <karan.chandra@somaiya.edu>
+Date:   Thu Jan 30 17:20:29 2020 +0530
+
+    Initial
+
+C:\Users\CHANDRA's\Documents\jsonajaxExampleYoutube>cd ..
+
+C:\Users\CHANDRA's\Documents>ls
+'ls' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\CHANDRA's\Documents>git clone
+fatal: You must specify a repository to clone.
+
+usage: git clone [<options>] [--] <repo> [<dir>]
+
+    -v, --verbose         be more verbose
+    -q, --quiet           be more quiet
+    --progress            force progress reporting
+    -n, --no-checkout     don't create a checkout
+    --bare                create a bare repository
+    --mirror              create a mirror repository (implies bare)
+    -l, --local           to clone from a local repository
+    --no-hardlinks        don't use local hardlinks, always copy
+    -s, --shared          setup as shared repository
+    --recursive ...       alias of --recurse-submodules
+    --recurse-submodules[=<pathspec>]
+                          initialize submodules in the clone
+    -j, --jobs <n>        number of submodules cloned in parallel
+    --template <template-directory>
+                          directory from which templates will be used
+    --reference <repo>    reference repository
+    --reference-if-able <repo>
+                          reference repository
+    --dissociate          use --reference only while cloning
+    -o, --origin <name>   use <name> instead of 'origin' to track upstream
+    -b, --branch <branch>
+                          checkout <branch> instead of the remote's HEAD
+    -u, --upload-pack <path>
+                          path to git-upload-pack on the remote
+    --depth <depth>       create a shallow clone of that depth
+    --shallow-since <time>
+                          create a shallow clone since a specific time
+    --shallow-exclude <revision>
+                          deepen history of shallow clone, excluding rev
+    --single-branch       clone only one branch, HEAD or --branch
+    --no-tags             don't clone any tags, and make later fetches not to follow them
+    --shallow-submodules  any cloned submodules will be shallow
+    --separate-git-dir <gitdir>
+                          separate git dir from working tree
+    -c, --config <key=value>
+                          set config inside the new repository
+    --server-option <server-specific>
+                          option to transmit
+    -4, --ipv4            use IPv4 addresses only
+    -6, --ipv6            use IPv6 addresses only
+    --filter <args>       object filtering
+    --remote-submodules   any cloned submodules will use their remote-tracking branch
+    --sparse              initialize sparse-checkout file to include only files at root
+
+
+C:\Users\CHANDRA's\Documents>git clone https://github.com/KaranChandra/JSON-AJAX .
+fatal: destination path '.' already exists and is not an empty directory.
+
+C:\Users\CHANDRA's\Documents>git clone https://github.com/KaranChandra/JSON-AJAX .
+fatal: destination path '.' already exists and is not an empty directory.
+
+C:\Users\CHANDRA's\Documents>cd jsonajax
+
+C:\Users\CHANDRA's\Documents\jsonajax>git clone https://github.com/KaranChandra/JSON-AJAX .
+Cloning into '.'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (10/10), 2.70 KiB | 4.00 KiB/s, done.
+
+C:\Users\CHANDRA's\Documents\jsonajax>git remote -v
+origin  https://github.com/KaranChandra/JSON-AJAX (fetch)
+origin  https://github.com/KaranChandra/JSON-AJAX (push)
+
+C:\Users\CHANDRA's\Documents\jsonajax>git branch -a
+* master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/master
+
+C:\Users\CHANDRA's\Documents\jsonajax>git diff
+diff --git a/index.html b/index.html
+index d5044f9..a62c3da 100644
+--- a/index.html
++++ b/index.html
+@@ -9,6 +9,7 @@
+        <header>
+                <h1>JSON & AJAX</h1>
+                <BUTTON id="btn">Fetch Info of 3 New Animals</BUTTON>
++               <h3>Jai Mataji</h3>^M
+        </header>
+
+        <div id="animal-info"></div>
+
+C:\Users\CHANDRA's\Documents\jsonajax>git add -A
+
+C:\Users\CHANDRA's\Documents\jsonajax>git commit -m "Added in html"
+[master 069f695] Added in html
+ 1 file changed, 1 insertion(+)
+
+C:\Users\CHANDRA's\Documents\jsonajax>git pull origin master
+From https://github.com/KaranChandra/JSON-AJAX
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\CHANDRA's\Documents\jsonajax>git push origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 390 bytes | 130.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/KaranChandra/JSON-AJAX
+   8648060..069f695  master -> master
+
+C:\Users\CHANDRA's\Documents\jsonajax>git branch
+* master
+
+C:\Users\CHANDRA's\Documents\jsonajax>
+
+C:\Users\CHANDRA's\Documents\jsonajax>
+
